@@ -1,10 +1,9 @@
-#/usr/bin/venv python3
+#! venv/bin/python
 
 import argparse
 from ImputationAccuracyScores.Dataset import make_dataset
 
 if __name__ == '__main__':
-
     parser = argparse.ArgumentParser(prog='./IAS.py',
                                      usage='%(prog)s [options]',
                                      description="""
@@ -23,4 +22,3 @@ if __name__ == '__main__':
 
     output_file.to_csv(args.output, sep='\t', index=False)
     print('Done!')
-

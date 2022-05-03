@@ -112,11 +112,13 @@ If it have worked well (no bugs), then everything is OK!
 | rs72642184 |   0.18 |  0.63   |  0.67  |  0.94  | ... |
 |    ...     |  ...   |   ...   |  ...   |  ...   | ... |
 
-**AF** - allele frequency
-**IQS** - imputation quality score
-**R2** - squared correlation coefficient
-**CR_GT** - Concordance rate (discrete version)
-**CR_GP** - Concordance rate (incorporates probabilities)
+- **ID** - variant ID from dataset with actual genotypes
+- **AF** - allele frequency
+- **IQS** - imputation quality score
+- **R2** - squared correlation coefficient
+- **DR2** - Dosage-R2 from Beagle output (if exists)
+- **CR_GT** - Concordance rate (discrete version)
+- **CR_GP** - Concordance rate (incorporates probabilities)
 
 ## **Reference**
 

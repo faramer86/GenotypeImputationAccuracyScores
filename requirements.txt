@@ -1,0 +1,14 @@
+click==8.0.4
+colorama==0.4.4
+coloredlogs==15.0.1
+cyvcf2==0.30.14
+humanfriendly==10.0
+numpy==1.22.3
+pandas==1.4.2
+pip==22.0.4
+python-dateutil==2.8.2
+pytz==2022.1
+setuptools==51.3.3
+six==1.16.0
+tqdm==4.64.0
+wheel==0.36.2
