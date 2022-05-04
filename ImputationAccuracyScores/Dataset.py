@@ -1,17 +1,19 @@
 import subprocess
+import sys
 import numpy as np
 import pandas as pd
 from cyvcf2 import VCF
 from tqdm import trange
 from colorama import Fore
 from ImputationAccuracyScores.Scores import *
+from ImputationAccuracyScores.InputChecks import is_equal
 
 
 def make_dataset(mask_path: str, imp_path: str) -> pd.DataFrame:
-    # Final dataset
+    # Dataset template
     scores = pd.DataFrame(columns=['ID', 'AF', 'CR_GT', 'CR_GP', 'R2', 'IQS', 'DR2'])
 
-    # Bar formatting variables to make it pretty
+    # Bar formatting variables to make processing bar pretty
     n_vars = int(subprocess.run(f'zcat {imp_path} | grep -v "#" | cut -f1 | wc -l',
                                 shell=True,
                                 capture_output=True).stdout)
@@ -22,9 +24,13 @@ def make_dataset(mask_path: str, imp_path: str) -> pd.DataFrame:
                                   VCF(imp_path),
                                   trange(n_vars, bar_format=bar_format)):
         var_id = masked.ID
-        var_af = round(imputed.aaf, 3)
+        var_af = imputed.aaf
+
+        # Comparability checks
+        is_equal(masked.ID, imputed.ID)
+
         if masked.call_rate != 1:
-            print(f'Warning: Call rate of {var_id} is not 1 -> We will skip it!')
+            print(f'Warning: Call rate of {var_id} is not 1 -> We will skip it!\n')
             continue
 
         # Inputs: genotypes, imputation probabilities and dosages

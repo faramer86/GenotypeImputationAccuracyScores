@@ -2,6 +2,7 @@
 
 import argparse
 from ImputationAccuracyScores.Dataset import make_dataset
+from ImputationAccuracyScores.InputChecks import is_exist, is_gz
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(prog='./IAS.py',
@@ -18,7 +19,11 @@ if __name__ == '__main__':
                         help='Output file path/name.')
     args = parser.parse_args()
 
-    output_file = make_dataset(args.masked, args.imputed)
+    # Check VCF files
+    is_exist([args.masked, args.imputed])
+    is_gz([args.masked, args.imputed])
 
-    output_file.to_csv(args.output, sep='\t', index=False)
+    # Create dataset with scores
+    make_dataset(args.masked, args.imputed).to_csv(args.output, sep='\t', index=False)
+
     print('Done!')
