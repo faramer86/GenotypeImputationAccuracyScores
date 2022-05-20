@@ -85,8 +85,8 @@ example/test:
 
 ```bash
 ./GIAS.py \
-    -i data/test.masked.vcf.gz \
-    -m data/test.imputed.vcf.gz \
+    -i data/imputed.test.vcf.gz \
+    -m data/masked.test.vcf.gz \
     -o test.scores.tsv
 ```
 
