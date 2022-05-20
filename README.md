@@ -33,10 +33,10 @@ to consult the official documentation: https://virtualenv.pypa.io/en/latest/
 Firstly, clone this repository to your local machine. 
 
 ```bash
-git clone https://github.com/faramer86/ImputationAccuracyScores.git
+git clone https://github.com/faramer86/GenotypeImputationAccuracyScores.git
 ```
 
-Go to the "ImputationAccuracyScores" repository, create and launch virtual environment:
+Go to the "GenotypeImputationAccuracyScores" repository, create and launch virtual environment:
 
 ```bash
 virtualenv venv
