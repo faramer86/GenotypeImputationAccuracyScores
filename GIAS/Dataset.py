@@ -1,15 +1,15 @@
 import subprocess
-import sys
 import numpy as np
 import pandas as pd
 from cyvcf2 import VCF
 from tqdm import trange
 from colorama import Fore
-from ImputationAccuracyScores.Scores import *
-from ImputationAccuracyScores.InputChecks import is_equal
+from GIAS.Scores import *
+from GIAS.InputChecks import is_equal
 
 
-def make_dataset(mask_path: str, imp_path: str) -> pd.DataFrame:
+def make_dataset(mask_path: str,
+                 imp_path: str) -> pd.DataFrame:
     # Dataset template
     scores = pd.DataFrame(columns=['ID', 'AF', 'CR_GT', 'CR_GP', 'R2', 'IQS', 'DR2'])
 

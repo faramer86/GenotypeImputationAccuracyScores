@@ -19,7 +19,8 @@ def is_gz(paths: list) -> None:
     return None
 
 
-def is_equal(marker_id1, marker_id2):
+def is_equal(marker_id1: str,
+             marker_id2: str) -> None:
     if marker_id1 != marker_id2:
         print(f'Error: Masked id {marker_id1} != Imputed id {marker_id2} -> We will stop the analysis!\n' +
               'Make sure that both files are sorted and include the same set of variants.\n')

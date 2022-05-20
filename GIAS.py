@@ -1,11 +1,11 @@
 #! venv/bin/python
 
 import argparse
-from ImputationAccuracyScores.Dataset import make_dataset
-from ImputationAccuracyScores.InputChecks import is_exist, is_gz
+from GIAS.Dataset import make_dataset
+from GIAS.InputChecks import is_exist, is_gz
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(prog='./IAS.py',
+    parser = argparse.ArgumentParser(prog='./GIAS.py',
                                      usage='%(prog)s [options]',
                                      description="""
                                      This tool compare two VCF.GZ files (masked and imputed genotypes)

@@ -1,7 +1,7 @@
-# **Imputation Accuracy Scores**
+# **Genotype Imputation Accuracy Scores**
 This script compare two VCF.GZ files and output several commonly used accuracy
 scores (R2, IQS, CR etc.). This is especially handy when you want to estimate
-true imputation accuracy using masking approach.
+true genotype imputation accuracy using masking approach.
 
 Initially, it was optimized to work with `BEAGLE 5.2` output. 
 
@@ -30,7 +30,7 @@ to consult the official documentation: https://virtualenv.pypa.io/en/latest/
 
 ## **Installation**
 
-Firstly, clone GPrior repository to your local machine. 
+Firstly, clone this repository to your local machine. 
 
 ```bash
 git clone https://github.com/faramer86/ImputationAccuracyScores.git
@@ -52,7 +52,7 @@ This command will install all the necessary python packages:
 pip install -r requirements.txt
 ```
 
-**Now you can launch `IAS.py`, it should work!**
+**Now you can launch `GIAS.py`, it should work!**
 
 #### NOTE:
 
@@ -84,7 +84,7 @@ https://stackoverflow.com/questions/17737203/python-and-virtualenv-on-windows
 example/test:
 
 ```bash
-./IAS.py \
+./GIAS.py \
     -i data/test.masked.vcf.gz \
     -m data/test.imputed.vcf.gz \
     -o test.scores.tsv
