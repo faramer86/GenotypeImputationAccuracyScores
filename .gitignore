@@ -1,6 +1,6 @@
 .idea/
 venv/
-IAS.ipynb
-ImputationAccuracyScores/__pycache__/
+GIAS.ipynb
+GIAS/__pycache__/
 .ipynb_checkpoints/
 __pycache__/
