@@ -5,6 +5,10 @@ true genotype imputation accuracy using masking approach.
 
 Initially, it was optimized to work with `BEAGLE 5.2` output. 
 
+## **Reference**
+
+Kolosov N, Rezapova V, Rotar O, Loboda A, Freylikhman O, et al. (2022) Genotype imputation and polygenic score estimation in northwestern Russian population. PLOS ONE 17(6): e0269434. https://doi.org/10.1371/journal.pone.0269434
+
 ## **Dependencies** 
 
 Make sure that you have `python` version >= 3.8 and latest version of `pip`.
@@ -119,7 +123,3 @@ If it have worked well (no bugs), then everything is OK!
 - **DR2** - Dosage-R2 from Beagle output (if exists)
 - **CR_GT** - Concordance rate (discrete version)
 - **CR_GP** - Concordance rate (incorporates probabilities)
-
-## **Reference**
-
- TODO: PLOS ONE DOI
